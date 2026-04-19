@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>郭英杰 - 项目经验展示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.6s ease;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.6s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .project-card.core {
+            border-top: 4px solid #667eea;
+        }
+        
+        .project-card.supplementary {
+            border-top: 4px solid #48bb78;
+        }
+        
+        .project-card.finance {
+            border-top: 4px solid #ed8936;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .badge.core {
+            background: #edf2f7;
+            color: #667eea;
+        }
+        
+        .badge.supplementary {
+            background: #f0fff4;
+            color: #48bb78;
+        }
+        
+        .badge.finance {
+            background: #fffaf0;
+            color: #ed8936;
+        }
+        
+        .project-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2d3748;
+            margin: 10px 0;
+        }
+        
+        .project-time {
+            font-size: 0.9em;
+            color: #718096;
+            margin-bottom: 15px;
+        }
+        
+        .project-highlight {
+            background: #f7fafc;
+            padding: 10px 12px;
+            border-left: 3px solid #667eea;
+            margin: 15px 0;
+            font-weight: 500;
+            color: #2d3748;
+            font-size: 0.95em;
+        }
+        
+        .project-details {
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+        
+        .project-details li {
+            margin: 10px 0;
+            margin-left: 20px;
+            color: #4a5568;
+            font-size: 0.95em;
+        }
+        
+        .section-title {
+            color: white;
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>郭英杰</h1>
+            <p>项目经验 & 核心案例展示</p>
+            <p style="margin-top: 10px; font-size: 0.95em; opacity: 0.9;">6年9个月工作经验 | 金融行业数字化建设专家</p>
+        </div>
+        
+        <div class="section-title">📌 简历中重点展示的项目</div>
+        
+        <div class="projects-grid">
+            <!-- 项目1 -->
+            <div class="project-card core">
+                <span class="badge core">核心项目</span>
+                <div class="project-title">浙江移动业财一体化治理项目</div>
+                <div class="project-time">⏱️ 2024/08 - 2025/03</div>
+                <div class="project-highlight">✨ 与租赁行业契合度：90%</div>
+                <div class="project-details">
+                    <ul>
+                        <li>负责业务系统与财务系统的深度整合，建立统一的数据标准规范</li>
+                        <li>通过ETL工具进行多源数据整合，实现业财数据标准化管理</li>
+                        <li>设计企业级数据分析指标体系，涵盖收入核算、成本分摊等关键场景</li>
+                        <li>实施主数据管理体系(MDM)，确保数据完整性和一致性</li>
+                        <li>制定数据质量监控方案，提升企业运营效率</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 项目2 -->
+            <div class="project-card core">
+                <span class="badge core">核心项目</span>
+                <div class="project-title">工信研究大脑系统实施项目</div>
+                <div class="project-time">⏱️ 2023/01 - 2024/04</div>
+                <div class="project-highlight">✨ 项目管理与交付能力体现</div>
+                <div class="project-details">
+                    <ul>
+                        <li>担任产品线负责人，管理项目全生命周期</li>
+                        <li>已完成1期建设并成功上线，正在推进2期内容</li>
+                        <li>对外负责客户需求调研、需求评估和进度汇报</li>
+                        <li>对内进行方案设计与协调实施，展现强大的沟通协调能力</li>
+                        <li>完整的项目交付能力得到充分体现</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 项目3 -->
+            <div class="project-card core">
+                <span class="badge core">核心项目</span>
+                <div class="project-title">浙商回归一键达实施项目</div>
+                <div class="project-time">⏱️ 2022/07 - 2022/09</div>
+                <div class="project-highlight">✨ 快速交付与创新能力</div>
+                <div class="project-details">
+                    <ul>
+                        <li>从0-1完成系统建设，仅用12个工作日完成需求调研至上线</li>
+                        <li>负责需求调研、产品方案原型输出、开发测试跟进</li>
+                        <li>产品方案从无到有进行完整设计</li>
+                        <li>获得客户高度认可，体现快速分析和问题解决能力</li>
+                        <li>充分展现在快速变化环境下的适应能力</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-title">🌟 补充项目详情</div>
+        
+        <div class="projects-grid">
+            <!-- 补充项目1 -->
+            <div class="project-card supplementary">
+                <span class="badge supplementary">补充项目</span>
+                <div class="project-title">流程数字化治理项目</div>
+                <div class="project-time">⏱️ 2025/02 - 2025/05</div>
+                <div class="project-highlight">💡 流程设计专长体现</div>
+                <div class="project-details">
+                    <ul>
+                        <li>负责企业流程数字化治理行业调研</li>
+                        <li>针对不同企业设计差异化流程解决方案</li>
+                        <li>覆盖需求分析到系统落地的全生命周期</li>
+                        <li>重点解决跨部门协作效率问题</li>
+                        <li>直接对标租赁行业审批流、合同流等复杂流程设计</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 补充项目2 -->
+            <div class="project-card supplementary">
+                <span class="badge supplementary">补充项目</span>
+                <div class="project-title">可信数据空间研究项目</div>
+                <div class="project-time">⏱️ 2025/09 - 2025/11</div>
+                <div class="project-highlight">🔐 数据安全管理</div>
+                <div class="project-details">
+                    <ul>
+                        <li>开展可信数据空间行业市场调研</li>
+                        <li>深入调研现有业务系统架构和IT基础设施</li>
+                        <li>评估数据管理现状，识别安全风险点</li>
+                        <li>设计符合企业需求的可信数据空间方案</li>
+                        <li>编制建设可行性研究报告，包括成本效益分析</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 金融项目 -->
+            <div class="project-card finance">
+                <span class="badge finance">金融项目</span>
+                <div class="project-title">厦门银行新信贷管理项目</div>
+                <div class="project-time">⏱️ 2021/04 - 2021/07</div>
+                <div class="project-highlight">🏦 金融系统建设经验</div>
+                <div class="project-details">
+                    <ul>
+                        <li>厦门银行新信贷系统建设，四个系统同步实施</li>
+                        <li>参与前期客户调研与咨询工作</li>
+                        <li>进行差异化分析与需求方案设计</li>
+                        <li>编写需求规格书，进行开发需求答疑</li>
+                        <li>深刻理解金融产品的审批流、风险管理等机制</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 其他项目1 -->
+            <div class="project-card">
+                <span class="badge supplementary">补充项目</span>
+                <div class="project-title">财开投资管理系统实施项目</div>
+                <div class="project-time">⏱️ 2023/08 - 2023/10</div>
+                <div class="project-highlight">💰 资金管理系统</div>
+                <div class="project-details">
+                    <ul>
+                        <li>建设财开集团内部投资管理平台</li>
+                        <li>实现投资流程线上化</li>
+                        <li>负责系统协同赋能及子基金模块设计</li>
+                        <li>进行需求调研与系统设计</li>
+                        <li>已完成初验，直接对标租赁资金清算系统</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 其他项目2 -->
+            <div class="project-card">
+                <span class="badge core">核心能力</span>
+                <div class="project-title">安硕信用风险管理系统研发</div>
+                <div class="project-time">⏱️ 2020/11 - 2021/03</div>
+                <div class="project-highlight">🛡️ 风险管理系统</div>
+                <div class="project-details">
+                    <ul>
+                        <li>公司主线产品的迭代研发</li>
+                        <li>系统流程优化与用户体验升级</li>
+                        <li>独立负责一模块的需求方案规划与产品设计</li>
+                        <li>编写需求规格说明书</li>
+                        <li>进行开发测试跟踪和验收</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>📧 联系方式：18549986868 | gyj_ginger@163.com</p>
+            <p style="margin-top: 15px; font-size: 0.95em;">此页面展示了我的核心项目经验。如有任何问题，欢迎咨询！</p>
+        </div>
+    </div>
+</body>
+</html>
