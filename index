@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>郭英杰｜项目与产品经理（副简历）</title>
+  <meta name="description" content="项目经验与自我评价补充页" />
+  <style>
+    :root {
+      --bg: #f5f8fc;
+      --card: #ffffff;
+      --primary: #0b5cab;
+      --primary-deep: #083b73;
+      --text: #1f2937;
+      --subtext: #5b6472;
+      --line: #d9e3f0;
+      --tag-bg: #eaf2fb;
+      --shadow: 0 10px 30px rgba(11, 92, 171, 0.08);
+      --radius: 18px;
+      --maxw: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(180deg, #eef4fb 0%, #f8fbff 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--maxw));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 42px 0 22px;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, #0b5cab 0%, #0b6fc7 45%, #1f88df 100%);
+      color: #fff;
+      border-radius: 24px;
+      box-shadow: 0 18px 40px rgba(11, 92, 171, 0.18);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      right: -60px;
+      top: -60px;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .name {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin: 0;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      font-size: 15px;
+      opacity: 0.96;
+    }
+
+    .meta {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .meta span,
+    .tags span {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(6px);
+    }
+
+    .quick-nav {
+      margin: 18px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .quick-nav a {
+      padding: 9px 14px;
+      border-radius: 12px;
+      font-size: 13px;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
+      transition: 0.2s ease;
+    }
+
+    .quick-nav a:hover {
+      background: rgba(255, 255, 255, 0.18);
+      transform: translateY(-1px);
+    }
+
+    .note {
+      margin-top: 14px;
+      font-size: 13px;
+      opacity: 0.9;
+      position: relative;
+      z-index: 1;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 300px minmax(0, 1fr);
+      gap: 22px;
+      padding: 22px 0 36px;
+    }
+
+    .sidebar,
+    .content-section,
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .sidebar {
+      padding: 18px;
+      position: sticky;
+      top: 18px;
+      height: fit-content;
+    }
+
+    .side-title,
+    .section-title {
+      margin: 0 0 12px;
+      color: var(--primary-deep);
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .side-block + .side-block {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-list,
+    .summary-list {
+      display: grid;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--subtext);
+    }
+
+    .label {
+      display: inline-block;
+      min-width: 64px;
+      color: var(--primary-deep);
+      font-weight: 700;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tags span {
+      background: var(--tag-bg);
+      color: var(--primary-deep);
+      border: 1px solid #d6e6fa;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 7px 12px;
+    }
+
+    .content {
+      display: grid;
+      gap: 18px;
+    }
+
+    .content-section {
+      padding: 22px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 6px;
+      height: 20px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--primary) 0%, #57a8ea 100%);
+    }
+
+    .section-text {
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .section-text p {
+      margin: 0 0 12px;
+    }
+
+    .projects-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .project-count {
+      font-size: 13px;
+      color: var(--subtext);
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f3f7fc;
+      border: 1px solid var(--line);
+    }
+
+    .projects-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .project-card {
+      padding: 18px;
+      transition: 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(11, 92, 171, 0.12);
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .project-name {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary-deep);
+      line-height: 1.4;
+    }
+
+    .project-time {
+      white-space: nowrap;
+      font-size: 13px;
+      color: var(--primary);
+      background: #edf5ff;
+      border: 1px solid #d7e8fb;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .role-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .role-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary-deep);
+      background: var(--tag-bg);
+      border: 1px solid #d7e8fb;
+    }
+
+    .project-block {
+      margin-top: 10px;
+    }
+
+    .project-block-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary-deep);
+      margin-bottom: 8px;
+    }
+
+    .project-block p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .project-block ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--text);
+    }
+
+    .project-block li {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    .footer {
+      padding: 10px 0 40px;
+      color: var(--subtext);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .back-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(11, 92, 171, 0.22);
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    @media (max-width: 920px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(calc(100% - 20px), var(--maxw));
+      }
+
+      .hero {
+        padding-top: 18px;
+      }
+
+      .hero-card {
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .hero-top,
+      .project-top,
+      .projects-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .name {
+        font-size: 28px;
+      }
+
+      .content-section,
+      .project-card,
+      .sidebar {
+        padding: 16px;
+      }
+
+      .project-time {
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="hero-card">
+        <div class="hero-top">
+          <div>
+            <h1 class="name">郭英杰｜项目与产品经理（副简历）</h1>
+            <p class="subtitle">包含个人概述、自我评价、全部项目经验及 AI 自动化能力补充说明。</p>
+            <div class="meta">
+              <span>项目与产品经理</span>
+              <span>金融数字化建设</span>
+              <span>银行信贷 / 业财数据治理</span>
+              <span>6年+工作经验</span>
+            </div>
+          </div>
+        </div>
+        <nav class="quick-nav">
+          <a href="#overview">个人概述</a>
+          <a href="#evaluation">自我评价</a>
+          <a href="#projects">全部项目经验</a>
+          <a href="#ai">AI 能力补充</a>
+        </nav>
+        <div class="note">说明：主简历展示代表项目，本页面展示全部项目详情，便于进一步了解完整经历。</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="side-block">
+          <h2 class="side-title">基本信息</h2>
+          <div class="contact-list">
+            <div><span class="label">姓名</span>郭英杰</div>
+            <div><span class="label">方向</span>项目与产品经理</div>
+            <div><span class="label">年限</span>6年+工作经验</div>
+            <div><span class="label">城市</span>杭州</div>
+            <div><span class="label">电话</span>18549986868</div>
+            <div><span class="label">邮箱</span>gyj_ginger@163.com</div>
+          </div>
+        </div>
+
+        <div class="side-block">
+          <h2 class="side-title">核心标签</h2>
+          <div class="tags">
+            <span>金融数字化</span>
+            <span>需求调研</span>
+            <span>业务流程设计</span>
+            <span>功能设计</span>
+            <span>项目交付</span>
+            <span>培训支持</span>
+            <span>银行信贷</span>
+            <span>投资管理</span>
+            <span>业财一体化</span>
+            <span>数据治理</span>
+            <span>AI 工作流</span>
+            <span>Agent 搭建</span>
+          </div>
+        </div>
+
+        <div class="side-block">
+          <h2 class="side-title">能力摘要</h2>
+          <div class="summary-list">
+            <div>覆盖需求调研、业务梳理、功能设计、开发跟进、测试验收、培训推广的全流程工作。</div>
+            <div>具备银行信贷、信用风险、投资管理、业财数据治理等项目实践经验。</div>
+            <div>能够结合业务场景搭建 AI 自动化工具、工作流与辅助型 Agent，提高交付效率。</div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="content">
+        <section class="content-section" id="overview">
+          <h2 class="section-title">个人概述</h2>
+          <div class="section-text">
+            <p>具备6年以上数字化建设相关经验，先后从事金融系统咨询、B端产品设计、数字化转型咨询等工作，覆盖需求调研、业务流程梳理、功能设计、开发跟进、测试验收、培训支持及项目推进等完整链路。</p>
+            <p>具备银行信贷、信用风险、投资管理、业财一体化、数据治理等相关项目经验，对金融行业数字化建设、业务需求分析与系统落地有较为扎实的实践积累。</p>
+            <p>当前希望聚焦金融科技、融资租赁及相关数字化建设场景，发挥项目与产品复合能力，推动系统建设高效落地。</p>
+          </div>
+        </section>
+
+        <section class="content-section" id="evaluation">
+          <h2 class="section-title">自我评价</h2>
+          <div class="section-text">
+            <p>我具备较强的业务理解、结构化分析和跨团队协同能力，能够围绕客户需求开展调研访谈、业务梳理、功能设计、文档输出、开发对接、测试验收和培训支持，推动系统按计划交付上线。</p>
+            <p>在金融数字化方向，参与过银行信贷、信用风险、小微信贷、投资管理等系统相关项目，熟悉需求差异分析、系统功能设计、实施过程中的问题协调与落地推进。</p>
+            <p>在数据治理与业财协同方向，参与过业财一体化、主数据管理、数据质量治理等项目，对财务、资金类场景的数据整合、标准化建设和指标体系设计有一定实践经验。</p>
+            <p>同时，在当前工作中持续探索AI自动化工具在研究分析、资料整理、知识沉淀和专题输出中的应用，能够基于具体业务场景搭建自动化工作流和辅助型Agent，提高复杂信息处理和项目交付效率。</p>
+            <p>整体上，兼具偏业务和产品的需求分析能力，以及推动项目落地的执行力，希望在融资租赁等金融场景中进一步沉淀项目管理与产品建设能力。</p>
+          </div>
+        </section>
+
+        <section class="content-section" id="projects">
+          <div class="projects-head">
+            <h2 class="section-title" style="margin-bottom: 0;">全部项目经验</h2>
+            <div class="project-count">共 16 个项目｜按时间倒序展示</div>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">数据要素信息专刊</h3>
+                <div class="project-time">2026.01–至今</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：独立负责</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>围绕国家及地方层面的数据要素政策动态、行业资讯及相关发展趋势，开展持续性信息收集、分析研判与专题输出。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>负责全面收集国家及地方层面的数据要素政策动态和行业资讯信息源。</li>
+                  <li>利用AI自动化工具，搭建自动化信息采集工作流，对采集的数据要素相关政策文件进行深度解读和分析研判。</li>
+                  <li>结合行业趋势分析，对客户提出具有实操性的数字化转型发展建议方案。</li>
+                  <li>独立完成每季度《数据要素信息专刊》的编撰工作。</li>
+                  <li>建立持续更新的数据要素资讯信息库。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">浙江移动可信数据空间研究项目</h3>
+                <div class="project-time">2025.09–2025.11</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：咨询 / 方案设计</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>围绕可信数据空间建设开展行业研究、现状评估及实施方案设计，为客户后续建设提供研究依据和路径规划。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>负责开展可信数据空间行业市场调研工作，分析行业发展趋势。</li>
+                  <li>针对客户现有业务系统架构进行深入调研，评估IT基础设施和数据管理现状，识别潜在数据安全风险点。</li>
+                  <li>基于国内外可信数据空间标准规范，结合实际业务场景，设计符合企业需求的解决方案框架。</li>
+                  <li>牵头编制可信数据空间建设可行性研究报告，包括成本效益分析及实施路径规划。</li>
+                  <li>定期向客户汇报阶段性成果并提供专业咨询服务。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">流程数字化治理项目</h3>
+                <div class="project-time">2025.02–2025.05</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：咨询 / 方案支持</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>围绕企业流程治理和跨部门协同效率提升，研究和设计流程数字化治理方案。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>负责开展企业流程数字化治理的行业调研工作。</li>
+                  <li>针对不同规模企业的业务流程特点，设计差异化的流程数字化治理解决方案。</li>
+                  <li>方案覆盖从需求分析到系统落地的全生命周期管理，重点解决跨部门协作效率低下等问题。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">浙江移动业财一体化治理项目</h3>
+                <div class="project-time">2024.08–2025.03</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：咨询 / 方案设计</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>围绕业务系统与财务系统的数据整合及标准统一，推进业财协同治理和数据管理能力提升。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>负责业务系统与财务系统的数据整合工作，通过ETL工具对多源异构数据进行抽取、转换、加载处理。</li>
+                  <li>建立统一的数据标准规范，实现业财数据的标准化管理。</li>
+                  <li>设计并构建企业级数据分析指标体系，涵盖收入核算、成本分摊等关键业务场景，并结合现有可视化系统设计图表展示。</li>
+                  <li>主导元数据分析工作，梳理各业务系统字段定义和数据流向关系，提升数据的可追溯性和透明度。</li>
+                  <li>实施主数据管理体系，对客户信息等核心主数据进行清洗和标准化处理。</li>
+                  <li>制定并执行数据质量监控方案，提升企业运营数据的准确性和可靠性。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">工信研究大脑系统实施项目</h3>
+                <div class="project-time">2023.01–2024.04</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：产品线负责人</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>面向浙江省工业和信息化发展研究院建设内部数字化应用平台，以数字化工具赋能科研场景。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>负责对外客户需求调研、需求跟进和阶段性汇报。</li>
+                  <li>对内负责相关方案设计、资源协调及实施推进。</li>
+                  <li>推动项目一期建设完成，并参与二期建设内容洽谈。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">财开投资管理系统实施项目</h3>
+                <div class="project-time">2023.08–2023.10</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：产品 / 实施支持</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>建设集团内部投资管理平台，实现投资流程线上化。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>负责系统协同赋能及子基金模块的需求调研与系统设计。</li>
+                  <li>协作完成系统建设，支持项目推进。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">临安工业云图实施项目</h3>
+                <div class="project-time">2022.07–2023.10</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：项目产品经理 / 售前支持</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>区级项目，建设经济态势数据分析、高耗低效企业治理与地企项目管理的数据化治理系统。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>负责项目售前支持。</li>
+                  <li>负责需求调研、产品方案输出、开发测试跟进。</li>
+                  <li>支持项目阶段性汇报。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">仙居飞地产业链实施项目</h3>
+                <div class="project-time">2022.05–2023.03</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：产品经理 / 实施支持</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>县级项目，以生物医药产业为中心，构建产业链数据分析、地区招商与企业服务数字化系统。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>结合投标文件，对功能进行产品设计与方案原型输出。</li>
+                  <li>配合项目经理推进项目验收。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">嘉善工业亩均大数据平台实施项目</h3>
+                <div class="project-time">2022.04–2023.03</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：项目产品经理</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>县级项目，建设亩均综合评价、项目管理等综合性数字化系统，服务地方政府数字化改造。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>负责需求调研、产品方案及原型输出。</li>
+                  <li>跟进开发测试。</li>
+                  <li>配合项目经理推进项目验收。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">全域工业数字治理系统研发</h3>
+                <div class="project-time">2022.07–2023.01</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：产品设计参与者</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>公司主营业务产品，面向地方政府对区域企业、项目、厂房等对象进行数字化治理，涵盖多口径数据接入、模型评判、自定义评分项、省级数据对接与GIS地图接入等能力。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>参与产品方案讨论。</li>
+                  <li>参与产品设计并绘制原型图。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">浙商回归一键达实施项目</h3>
+                <div class="project-time">2022.07–2022.09</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：产品经理</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>市级试点项目，建设政企两端数字化招商系统，利用公司数据基础和模型能力支撑地区招商。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>负责项目需求调研。</li>
+                  <li>负责产品方案原型输出。</li>
+                  <li>跟进开发测试与项目阶段性汇报支持。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">流程表单系统升级研发</h3>
+                <div class="project-time">2022.05–2022.07</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：产品经理</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>公司低代码产品之一，通过表单与流程前端配置功能降低代码开发投入、提升项目开发效率。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>负责产品功能优化与用户体验提升。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">厦门银行新信贷管理项目</h3>
+                <div class="project-time">2021.04–2021.07</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：需求顾问</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>银行新信贷系统建设项目，包括多个系统同步实施。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>参与前期客户调研与咨询。</li>
+                  <li>根据行内现状与客户实际需求进行差异化分析与需求方案设计。</li>
+                  <li>编写需求规格书。</li>
+                  <li>进行开发需求答疑。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">安硕信用风险管理系统研发</h3>
+                <div class="project-time">2020.11–2021.03</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：产品设计</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>公司主线产品迭代研发项目，重点为系统流程优化和用户体验升级。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>独立负责模块前期需求方案规划与产品设计。</li>
+                  <li>编写需求规格说明书。</li>
+                  <li>跟踪开发与测试。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">宁波东海银行新一代信用风险管理系统实施项目</h3>
+                <div class="project-time">2020.07–2020.10</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：需求顾问</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>项目包括客户调研、需求设计、系统开发与测试等环节。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>负责前期客户访谈调研与需求规划。</li>
+                  <li>编写需求说明书。</li>
+                  <li>针对个性化需求进行系统产品功能设计。</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3 class="project-name">安硕智能小微信贷系统研发</h3>
+                <div class="project-time">2019.08–2020.01</div>
+              </div>
+              <div class="role-line"><span class="role-badge">项目角色：产品设计</span></div>
+              <div class="project-block">
+                <div class="project-block-title">项目描述</div>
+                <p>公司首个智能化系统产品，结合大数据与智能化插件应用进行开发与设计。</p>
+              </div>
+              <div class="project-block">
+                <div class="project-block-title">项目职责</div>
+                <ul>
+                  <li>负责产品功能设计。</li>
+                  <li>编写系统需求文档。</li>
+                  <li>绘制原型图。</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" id="ai">
+          <h2 class="section-title">AI 自动化能力补充说明</h2>
+          <div class="section-text">
+            <p>在当前工作中，持续将AI自动化工具应用于政策动态监测、行业资讯采集、内容清洗、知识沉淀和专题研究等场景，优化信息处理和咨询交付效率。</p>
+            <p>能够结合业务目标搭建自动化工作流，对信息采集、分类筛选、内容提炼、结构化整理等环节进行串联，提高资料处理效率和复用价值。</p>
+            <p>同时具备一定的Agent辅助场景设计能力，可围绕研究分析、知识更新、专题输出等任务搭建辅助型流程，支持团队在复杂信息环境下更高效地完成方案研究与内容产出。</p>
+          </div>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <div class="footer">
+    建议部署方式：上传为 GitHub Pages 的 index.html，并将公开链接生成二维码放入主简历。
+  </div>
+
+  <button class="back-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="返回顶部">↑</button>
+</body>
+</html>
